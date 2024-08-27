@@ -1,1 +1,1 @@
-<img src="circuito.png" alt="Texto Alternativo">
+![circuio](circuito.png)
