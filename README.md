@@ -29,3 +29,5 @@ laço de realimentação.
 O primeiro Latch (Master) armazena o estado de D na borda de subida do clock e o latch (slave), armazena o estado de saída do master na borda de descida do clock.
 A porta NOT no circuito, garante que a mudança do Slave só aconteça depois da mudança do master, permitindo uma sincronização precisa dos dados.
 
+# Circuito 4 - 
+![parte4](https://github.com/user-attachments/assets/24e3b09c-86fc-4170-83df-599e5374541f)
