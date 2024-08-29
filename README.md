@@ -32,3 +32,6 @@ A porta NOT no circuito, garante que a mudança do Slave só aconteça depois da
 
 # Circuito 4 - 
 ![parte4](https://github.com/user-attachments/assets/24e3b09c-86fc-4170-83df-599e5374541f)
+
+O latch armazena D, quando o nível do clock é 1. Já, o flip-flop de borda de subida armazenará o valor de D, quando ocorrer a transição do clock de 0 para 1. No flip-flop de borda de descida armazenará o valor de D, quando ocorrer a transição do clock de 1 para 0. 
+
