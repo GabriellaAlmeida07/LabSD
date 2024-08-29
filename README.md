@@ -1,7 +1,8 @@
 # Circuito 1 - Gated RS Latch 
 ![circuito1](https://github.com/user-attachments/assets/3d7d451b-6084-4a07-8311-c1169538b51d)
 ![lut](https://github.com/user-attachments/assets/0da0f305-64e6-4848-be08-e9e9e052e11e)
-![simulacao](https://github.com/user-attachments/assets/97da4072-6168-46fc-b379-5b371846af7e)
+![parte1certo](https://github.com/user-attachments/assets/fd47e797-b328-4f76-9406-1244dee06b4c)
+
 
 Nesse circuito apenas um bit é armazenado, sendo que a entrada SET é responsável por Setar um bit no circuito.
 Ele é controlado pelo nível do clock, ou seja, clock em 1, armazena o SET/RESET.
