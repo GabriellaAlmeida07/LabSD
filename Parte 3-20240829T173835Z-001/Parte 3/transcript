@@ -1,0 +1,40 @@
+# Compile of parte1vhdl.vhd was successful.
+vsim -gui work.exaula
+# vsim -gui work.exaula 
+# Start time: 13:03:59 on Aug 29,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.exaula(structural)
+add wave -position end  sim:/exaula/Clk
+add wave -position end  sim:/exaula/R
+add wave -position end  sim:/exaula/S
+add wave -position end  sim:/exaula/Q
+force -freeze sim:/exaula/Clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/exaula/R 0 0
+force -freeze sim:/exaula/S 1 0
+run
+run
+force -freeze sim:/exaula/S 0 0
+run
+run
+run
+force -freeze sim:/exaula/R 1 0
+run
+run
+run
+force -freeze sim:/exaula/S 1 0
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 850 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 850 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 850 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 850 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 850 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 850 ps.
+# End time: 13:05:42 on Aug 29,2024, Elapsed time: 0:01:43
+# Errors: 6, Warnings: 0

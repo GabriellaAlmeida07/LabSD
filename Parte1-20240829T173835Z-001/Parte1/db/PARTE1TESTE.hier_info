@@ -1,0 +1,9 @@
+|PARTE1TESTE
+QA <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst.IN1
+S => inst1.IN1
+R => inst.IN0
+QB <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
