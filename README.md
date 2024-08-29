@@ -16,11 +16,11 @@ Nesse circuito, o D retira a indeterminação do circuito anterior, visto que, p
 Contralado por nível, ou seja, o valor de D será armazenado quando o nível do clock for 1. Caso o contrário, será armazenado o estado anterior, por conta do 
 laço de realimentação.
 
-| Clock | D  | Q   |
-| ------| -- | --- |
-| 0     | x  | Q(t)|
-| 1     | 0  | 0   |
-| 1     | 1  | 1   |
+| Clock | D     | Q     |
+| ------| ------| ------|
+| 0     | x     |   Q(t)|
+| 1     | 0     | 0     |
+| 1     | 1     | 1     |
 
 # Circuito 3 - Flip-Flop D (Master - Slave)
 ![dese3](https://github.com/user-attachments/assets/a8488ea8-85c2-46f0-a97a-fcc33d619f9d)
