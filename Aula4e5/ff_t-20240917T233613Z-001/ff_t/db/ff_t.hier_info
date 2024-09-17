@@ -1,0 +1,243 @@
+|display
+da <= displaycerto:inst2.DA
+clk => contador_8bits:inst.clk
+clear => contador_8bits:inst.clear
+enable => contador_8bits:inst.enable
+db <= displaycerto:inst2.DB
+dc <= displaycerto:inst2.DC
+dd <= displaycerto:inst2.DD
+de <= displaycerto:inst2.DE
+df <= displaycerto:inst2.DF
+dg <= displaycerto:inst2.DG
+s1 <= displaycerto:inst3.DA
+s2 <= displaycerto:inst3.DB
+s3 <= displaycerto:inst3.DC
+s4 <= displaycerto:inst3.DD
+s5 <= displaycerto:inst3.DE
+s6 <= displaycerto:inst3.DF
+s7 <= displaycerto:inst3.DG
+
+
+|display|displaycerto:inst2
+DA <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => N.IN0
+A1 => inst4.IN0
+A1 => inst2.IN0
+A1 => inst11.IN0
+A1 => inst10.IN0
+A1 => inst14.IN0
+A1 => inst13.IN0
+A1 => inst9.IN0
+A1 => inst24.IN0
+A1 => inst28.IN0
+B1 => O.IN0
+B1 => inst2.IN1
+B1 => inst3.IN1
+B1 => Z.IN1
+B1 => inst11.IN1
+B1 => inst12.IN0
+B1 => inst14.IN1
+B1 => inst13.IN2
+B1 => inst19.IN0
+B1 => inst7.IN1
+B1 => inst22.IN1
+B1 => inst24.IN1
+B1 => inst28.IN1
+B1 => inst33.IN2
+C1 => P.IN0
+C1 => inst4.IN2
+C1 => inst12.IN1
+C1 => inst10.IN1
+C1 => inst5.IN2
+C1 => inst13.IN1
+C1 => inst19.IN1
+C1 => inst9.IN2
+C1 => inst18.IN1
+C1 => inst26.IN1
+C1 => inst27.IN1
+C1 => inst33.IN3
+D1 => inst8.IN3
+D1 => inst4.IN3
+D1 => inst2.IN3
+D1 => Q.IN0
+D1 => Z.IN3
+D1 => inst10.IN2
+D1 => inst6.IN3
+D1 => inst19.IN2
+D1 => inst20.IN2
+D1 => inst21.IN2
+D1 => inst18.IN2
+D1 => inst24.IN3
+D1 => inst26.IN2
+D1 => inst25.IN2
+D1 => inst33.IN0
+DB <= I.DB_MAX_OUTPUT_PORT_TYPE
+DC <= J.DB_MAX_OUTPUT_PORT_TYPE
+DD <= Y.DB_MAX_OUTPUT_PORT_TYPE
+DE <= w.DB_MAX_OUTPUT_PORT_TYPE
+DF <= L.DB_MAX_OUTPUT_PORT_TYPE
+DG <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst
+clk => ff_t:ff0.clk
+clk => ff_t:ff1.clk
+clk => ff_t:ff2.clk
+clk => ff_t:ff3.clk
+clk => ff_t:ff4.clk
+clk => ff_t:ff5.clk
+clk => ff_t:ff6.clk
+clk => ff_t:ff7.clk
+clear => ff_t:ff0.clear
+clear => ff_t:ff1.clear
+clear => ff_t:ff2.clear
+clear => ff_t:ff3.clear
+clear => ff_t:ff4.clear
+clear => ff_t:ff5.clear
+clear => ff_t:ff6.clear
+clear => ff_t:ff7.clear
+enable => output1.IN1
+enable => ff_t:ff0.enable
+Q0 <= ff_t:ff0.Q
+Q1 <= ff_t:ff1.Q
+Q2 <= ff_t:ff2.Q
+Q3 <= ff_t:ff3.Q
+Q4 <= ff_t:ff4.Q
+Q5 <= ff_t:ff5.Q
+Q6 <= ff_t:ff6.Q
+Q7 <= ff_t:ff7.Q
+nonQ0 <= ff_t:ff0.nonQ
+nonQ1 <= ff_t:ff1.nonQ
+nonQ2 <= ff_t:ff2.nonQ
+nonQ3 <= ff_t:ff3.nonQ
+nonQ4 <= ff_t:ff4.nonQ
+nonQ5 <= ff_t:ff5.nonQ
+nonQ6 <= ff_t:ff6.nonQ
+nonQ7 <= ff_t:ff7.nonQ
+
+
+|display|contador_8bits:inst|ff_t:ff0
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff1
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff2
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff3
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff4
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff5
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff6
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|contador_8bits:inst|ff_t:ff7
+clk => Q_int.CLK
+clear => Q_int.ACLR
+enable => Q_int.ENA
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+nonQ <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display|displaycerto:inst3
+DA <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => N.IN0
+A1 => inst4.IN0
+A1 => inst2.IN0
+A1 => inst11.IN0
+A1 => inst10.IN0
+A1 => inst14.IN0
+A1 => inst13.IN0
+A1 => inst9.IN0
+A1 => inst24.IN0
+A1 => inst28.IN0
+B1 => O.IN0
+B1 => inst2.IN1
+B1 => inst3.IN1
+B1 => Z.IN1
+B1 => inst11.IN1
+B1 => inst12.IN0
+B1 => inst14.IN1
+B1 => inst13.IN2
+B1 => inst19.IN0
+B1 => inst7.IN1
+B1 => inst22.IN1
+B1 => inst24.IN1
+B1 => inst28.IN1
+B1 => inst33.IN2
+C1 => P.IN0
+C1 => inst4.IN2
+C1 => inst12.IN1
+C1 => inst10.IN1
+C1 => inst5.IN2
+C1 => inst13.IN1
+C1 => inst19.IN1
+C1 => inst9.IN2
+C1 => inst18.IN1
+C1 => inst26.IN1
+C1 => inst27.IN1
+C1 => inst33.IN3
+D1 => inst8.IN3
+D1 => inst4.IN3
+D1 => inst2.IN3
+D1 => Q.IN0
+D1 => Z.IN3
+D1 => inst10.IN2
+D1 => inst6.IN3
+D1 => inst19.IN2
+D1 => inst20.IN2
+D1 => inst21.IN2
+D1 => inst18.IN2
+D1 => inst24.IN3
+D1 => inst26.IN2
+D1 => inst25.IN2
+D1 => inst33.IN0
+DB <= I.DB_MAX_OUTPUT_PORT_TYPE
+DC <= J.DB_MAX_OUTPUT_PORT_TYPE
+DD <= Y.DB_MAX_OUTPUT_PORT_TYPE
+DE <= w.DB_MAX_OUTPUT_PORT_TYPE
+DF <= L.DB_MAX_OUTPUT_PORT_TYPE
+DG <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+

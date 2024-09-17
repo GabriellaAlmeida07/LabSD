@@ -1,0 +1,156 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 152 320)
+	(text "Counter16" (rect 5 0 45 12)(font "Arial" ))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 27 31 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Arial" ))
+		(text "reset" (rect 21 43 41 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "Q0" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q0" (rect 104 27 115 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 1))
+	)
+	(port
+		(pt 136 48)
+		(output)
+		(text "Q1" (rect 0 0 10 12)(font "Arial" ))
+		(text "Q1" (rect 105 43 115 55)(font "Arial" ))
+		(line (pt 136 48)(pt 120 48)(line_width 1))
+	)
+	(port
+		(pt 136 64)
+		(output)
+		(text "Q2" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q2" (rect 104 59 115 71)(font "Arial" ))
+		(line (pt 136 64)(pt 120 64)(line_width 1))
+	)
+	(port
+		(pt 136 80)
+		(output)
+		(text "Q3" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q3" (rect 104 75 115 87)(font "Arial" ))
+		(line (pt 136 80)(pt 120 80)(line_width 1))
+	)
+	(port
+		(pt 136 96)
+		(output)
+		(text "Q4" (rect 0 0 12 12)(font "Arial" ))
+		(text "Q4" (rect 103 91 115 103)(font "Arial" ))
+		(line (pt 136 96)(pt 120 96)(line_width 1))
+	)
+	(port
+		(pt 136 112)
+		(output)
+		(text "Q5" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q5" (rect 104 107 115 119)(font "Arial" ))
+		(line (pt 136 112)(pt 120 112)(line_width 1))
+	)
+	(port
+		(pt 136 128)
+		(output)
+		(text "Q6" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q6" (rect 104 123 115 135)(font "Arial" ))
+		(line (pt 136 128)(pt 120 128)(line_width 1))
+	)
+	(port
+		(pt 136 144)
+		(output)
+		(text "Q7" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q7" (rect 104 139 115 151)(font "Arial" ))
+		(line (pt 136 144)(pt 120 144)(line_width 1))
+	)
+	(port
+		(pt 136 160)
+		(output)
+		(text "Q8" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q8" (rect 104 155 115 167)(font "Arial" ))
+		(line (pt 136 160)(pt 120 160)(line_width 1))
+	)
+	(port
+		(pt 136 176)
+		(output)
+		(text "Q9" (rect 0 0 11 12)(font "Arial" ))
+		(text "Q9" (rect 104 171 115 183)(font "Arial" ))
+		(line (pt 136 176)(pt 120 176)(line_width 1))
+	)
+	(port
+		(pt 136 192)
+		(output)
+		(text "Q10" (rect 0 0 15 12)(font "Arial" ))
+		(text "Q10" (rect 100 187 115 199)(font "Arial" ))
+		(line (pt 136 192)(pt 120 192)(line_width 1))
+	)
+	(port
+		(pt 136 208)
+		(output)
+		(text "Q11" (rect 0 0 14 12)(font "Arial" ))
+		(text "Q11" (rect 101 203 115 215)(font "Arial" ))
+		(line (pt 136 208)(pt 120 208)(line_width 1))
+	)
+	(port
+		(pt 136 224)
+		(output)
+		(text "Q12" (rect 0 0 15 12)(font "Arial" ))
+		(text "Q12" (rect 100 219 115 231)(font "Arial" ))
+		(line (pt 136 224)(pt 120 224)(line_width 1))
+	)
+	(port
+		(pt 136 240)
+		(output)
+		(text "Q13" (rect 0 0 15 12)(font "Arial" ))
+		(text "Q13" (rect 100 235 115 247)(font "Arial" ))
+		(line (pt 136 240)(pt 120 240)(line_width 1))
+	)
+	(port
+		(pt 136 256)
+		(output)
+		(text "Q14" (rect 0 0 16 12)(font "Arial" ))
+		(text "Q14" (rect 99 251 115 263)(font "Arial" ))
+		(line (pt 136 256)(pt 120 256)(line_width 1))
+	)
+	(port
+		(pt 136 272)
+		(output)
+		(text "Q15" (rect 0 0 15 12)(font "Arial" ))
+		(text "Q15" (rect 100 267 115 279)(font "Arial" ))
+		(line (pt 136 272)(pt 120 272)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 288)(line_width 1))
+	)
+)

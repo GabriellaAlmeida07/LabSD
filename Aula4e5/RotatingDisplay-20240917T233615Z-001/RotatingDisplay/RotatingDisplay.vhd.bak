@@ -1,0 +1,86 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity RotatingDisplay is
+    Port ( CLK : in STD_LOGIC;
+           RESET : in STD_LOGIC;
+           HEX0 : out STD_LOGIC_VECTOR (6 downto 0);
+           HEX1 : out STD_LOGIC_VECTOR (6 downto 0);
+           HEX2 : out STD_LOGIC_VECTOR (6 downto 0);
+           HEX3 : out STD_LOGIC_VECTOR (6 downto 0));
+end RotatingDisplay;
+
+architecture Behavioral of RotatingDisplay is
+    signal count : integer range 0 to 3 := 0;
+    signal clk_div : integer := 0;
+    signal word : STD_LOGIC_VECTOR (27 downto 0) := "0111111_0111111_0111111_0111111"; -- "dE10" in 7-segment encoding
+
+    -- 7-segment encoding for each character
+    constant SEGMENTS : array (0 to 15) of STD_LOGIC_VECTOR (6 downto 0) := (
+        "1000000", -- 0
+        "1111001", -- 1
+        "0100100", -- 2
+        "0110000", -- 3
+        "0011001", -- 4
+        "0010010", -- 5
+        "0000010", -- 6
+        "1111000", -- 7
+        "0000000", -- 8
+        "0010000", -- 9
+        "0001000", -- A
+        "0000011", -- b
+        "1000110", -- C
+        "0100001", -- d
+        "0000110", -- E
+        "0001110"  -- F
+    );
+
+begin
+    process(CLK, RESET)
+    begin
+        if RESET = '1' then
+            count <= 0;
+            clk_div <= 0;
+        elsif rising_edge(CLK) then
+            if clk_div = 50000000 then -- Assuming 50MHz clock, 1 second delay
+                clk_div <= 0;
+                count <= (count + 1) mod 4;
+            else
+                clk_div <= clk_div + 1;
+            end if;
+        end if;
+    end process;
+
+    process(count)
+    begin
+        case count is
+            when 0 =>
+                HEX0 <= word(6 downto 0);
+                HEX1 <= word(13 downto 7);
+                HEX2 <= word(20 downto 14);
+                HEX3 <= word(27 downto 21);
+            when 1 =>
+                HEX0 <= word(13 downto 7);
+                HEX1 <= word(20 downto 14);
+                HEX2 <= word(27 downto 21);
+                HEX3 <= word(6 downto 0);
+            when 2 =>
+                HEX0 <= word(20 downto 14);
+                HEX1 <= word(27 downto 21);
+                HEX2 <= word(6 downto 0);
+                HEX3 <= word(13 downto 7);
+            when 3 =>
+                HEX0 <= word(27 downto 21);
+                HEX1 <= word(6 downto 0);
+                HEX2 <= word(13 downto 7);
+                HEX3 <= word(20 downto 14);
+            when others =>
+                HEX0 <= "1111111";
+                HEX1 <= "1111111";
+                HEX2 <= "1111111";
+                HEX3 <= "1111111";
+        end case;
+    end process;
+end Behavioral;
