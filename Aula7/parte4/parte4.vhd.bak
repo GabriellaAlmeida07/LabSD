@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity parte4 is
+    Port ( vetor: in STD_LOGIC_VECTOR(2 DOWNTO 0);
+           reset : in STD_LOGIC;
+			  set: in STD_logic;
+			  );
+end parte4;
+
+architecture Behavioral of parte4 is
+    signal main_counter : INTEGER := 0;
+    signal digit_counter : INTEGER range 0 to 9 := 0;
+    signal one_second : STD_LOGIC := '0';
+begin
+	
+	process(set)
+    begin
+        case vetor is
+            when "000" =>  -- A
+            when "001" =>  --B
+            when "010" =>  --c
+            when "011" =>  --D
+            when "100" =>  --E
+            when "101" =>  --F
+            when "110" =>  --G
+            when "111" =>   --H
+        end case;
+    end process;
+        
+
+end Behavioral;

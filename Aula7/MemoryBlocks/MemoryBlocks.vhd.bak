@@ -1,0 +1,41 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY MemoryBlocks IS -- Deveria se chamar TOP-Level
+	PORT(
+			adress: IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			clock: IN STD_LOGIC  := '1';
+			dataIn: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+			wren: IN STD_LOGIC ; -- Segui os nomes da figura 1
+			dataOut: OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
+	);
+END MemoryBlocks;
+
+ARCHITECTURE behavior OF MemoryBlocks IS
+	-- Interface do componente a ser instanciado
+	-- sinais que o componente usa para se comunicar com outros componentes 
+	COMPONENT ram32x4
+		PORT( -- Copie o Port map que está no componente 
+				address		: IN STD_LOGIC_VECTOR (4 DOWNTO 0); -- Entrada de 5 bits para endereçar 32 plavras 
+				clock		: IN STD_LOGIC  := '1';
+				data		: IN STD_LOGIC_VECTOR (3 DOWNTO 0); -- Entrada dos dados a serem escritos (4 bits)
+				wren		: IN STD_LOGIC ;  -- Sinal para habilitar escrita
+				q		: OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
+		);
+	END COMPONENT;
+	
+	SIGNAL q_internal : STD_LOGIC_VECTOR (3 DOWNTO 0);
+
+BEGIN
+	-- Instancia o component RAM
+	-- Port Map conecta os sinais definidos na entidade ao componente instanciado
+		ram_instance: ram32x4
+		PORT MAP(
+				address => address,
+				clock => clock,
+				dataIn => data,
+				wren => wren,
+				dataOut => q_internal
+		);
+END behavior;

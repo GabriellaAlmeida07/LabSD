@@ -1,0 +1,111 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity fsm is
+    port(
+        clk: in STD_LOGIC;
+        reset: in STD_LOGIC;
+        w: in STD_LOGIC; -- entrada
+        z: out STD_LOGIC  -- saída
+    );
+end entity;
+
+architecture Behaviour of fsm is
+    type state_type is (A_0, B_0, D_0, E_0, F_0, G_0, H_0, I_1, E_1);
+    signal state: state_type := A_0; -- Estado inicial
+    signal next_state: state_type;
+begin
+
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            state <= A_0;
+            z <= '0'; -- Resetar a saída
+        elsif rising_edge(clk) then
+            state <= next_state;
+        end if;
+    end process;
+
+    process(state, w)
+    begin
+        -- Estado padrão
+        next_state <= state;
+
+        case state is
+            when A_0 =>
+                if w = '0' then
+                    next_state <= B_0; -- Um 1
+                elsif w = '1' then
+                    next_state <= F_0; -- Um 0
+                end if;
+
+            when B_0 =>
+                if w = '0' then
+                    next_state <= C_0; -- Dois 1s
+                elsif w = '1' then
+                    next_state <= F_0; -- Dois 0s
+                end if;
+
+            when C_0 =>
+                if w = '0' then
+                    next_state <= D_0; -- Três 1s
+                elsif w = '1' then
+                    next_state <= F_0; -- Três 0s
+                end if;
+
+            when D_0 =>
+                if w = '0' then
+                    next_state <= E_1; -- Quatro 1s
+                elsif w = '1' then
+                    next_state <= F_0; -- Quatro 0s
+                end if;
+
+            when E_1 =>
+                z <= '1'; -- Quatro 0s reconhecidos
+                if w = '0' then
+                    next_state <= E_1; -- Reiniciar
+                elsif w = '1' then
+                    next_state <= F_0; -- Continuar no estado
+                end if;
+
+            when F_0 =>
+                if w = '1' then
+                    next_state <= G_0; -- Reiniciar
+                elsif '0' then
+                    next_state <= B_0; -- Continuar no estado
+                end if;
+
+            when G_0 =>
+                -- Estado de reinício
+                if w = '1' then
+                    next_state <= H_0; -- Reinicia com 1
+                elsif w = '0' then
+                    next_state <= B_0; -- Reinicia com 0
+                end if;
+				
+				when H_0 =>
+                -- Estado de reinício
+                if w = '1' then
+                    next_state <= I_1; -- Reinicia com 1
+                elsif w = '0' then
+                    next_state <= B_0; -- Reinicia com 0e
+					end if;
+
+            when I_1 =>
+                z <= '1'; -- Saída alta
+					 if w = '1' then
+							next_state <= I_1;
+					 elsif w = '0' then
+							next_state <= B_0; -- Volta ao estado inicial após reconhecimento
+					 end if;
+
+        end case;
+
+        -- Limpar a saída se não estiver em um estado de saída
+        if state /= F_0 and state /= G_0 then
+            z <= '0';
+        end if;
+
+    end process;
+end architecture Behaviour;

@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/15528121/Desktop/MemoryBlocks/simulation/qsim
+Ememoryblocks
+Z1 w1728407697
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 CX9c^[CNfbzHb3XCH3hoa1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 NZ_cKj>1HW_D7i1UeTO[31
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 6`GHcm:DR>=X_840X1FV;0
+R0
+Z9 8MemoryBlocks.vho
+Z10 FMemoryBlocks.vho
+l0
+L37
+V@8oILVl>l60C4i?K=1Ig<1
+!s100 nkf_EkYGDl7C=Gj^ld=lc3
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1728407698
+!i10b 1
+Z13 !s108 1728407697.000000
+Z14 !s90 -work|work|MemoryBlocks.vho|
+Z15 !s107 MemoryBlocks.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 12 memoryblocks 0 22 @8oILVl>l60C4i?K=1Ig<1
+l98
+L65
+V_2zmS:9@0ReocBh7E1MRm0
+!s100 KmSGXiHdYKG<7eM@PkPSB3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Ememoryblocks_vhd_vec_tst
+Z18 w1728407696
+R6
+R7
+R0
+Z19 8Waveform3.vwf.vht
+Z20 FWaveform3.vwf.vht
+l0
+L32
+V^^DK3@I5C^:@9YIS=WlDO0
+!s100 cAgd@]S_ZeOH0S:56WPAn2
+R11
+32
+R12
+!i10b 1
+Z21 !s108 1728407698.000000
+Z22 !s90 -work|work|Waveform3.vwf.vht|
+Z23 !s107 Waveform3.vwf.vht|
+!i113 1
+R16
+R17
+Amemoryblocks_arch
+R6
+R7
+Z24 DEx4 work 24 memoryblocks_vhd_vec_tst 0 22 ^^DK3@I5C^:@9YIS=WlDO0
+l51
+L34
+VfNj>HZA4nG9ez]:XIn7Ym1
+!s100 FT4163lcJLg9ejXob5FDe3
+R11
+32
+R12
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R16
+R17

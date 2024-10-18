@@ -1,0 +1,12 @@
+
+State Machine - |fsm|state
+Name state.I_1 state.H_0 state.G_0 state.F_0 state.E_1 state.D_0 state.C_0 state.B_0 state.A_0 
+state.A_0 0 0 0 0 0 0 0 0 0 
+state.B_0 0 0 0 0 0 0 0 1 1 
+state.C_0 0 0 0 0 0 0 1 0 1 
+state.D_0 0 0 0 0 0 1 0 0 1 
+state.E_1 0 0 0 0 1 0 0 0 1 
+state.F_0 0 0 0 1 0 0 0 0 1 
+state.G_0 0 0 1 0 0 0 0 0 1 
+state.H_0 0 1 0 0 0 0 0 0 1 
+state.I_1 1 0 0 0 0 0 0 0 1 
